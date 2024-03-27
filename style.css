@@ -1,17 +1,39 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+/* Reset list styles */
+nav ul {
+    list-style-type: none;
     margin: 0;
-    background-color: #f0f0f0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333; /* Dark background color */
 }
 
+/* Display list items inline */
+nav ul li {
+    float: left;
+}
+
+/* Style links */
+nav ul li a {
+    display: block;
+    color: white; /* Light text color for contrast */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Change the link color to #111 (darker) on hover */
+nav ul li a:hover {
+    background-color: #111;
+}
+
+/* Additional styles for the gallery to ensure it doesn't break the nav styling */
 .gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
+    margin-top: 20px; /* Add space between nav and gallery */
 }
 
 .img-container {
@@ -25,9 +47,10 @@ body {
 .img-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Keeps aspect ratio, might crop the image */
+    object-fit: cover;
 }
 
+/* Full-screen styling */
 .full-screen {
     position: fixed;
     top: 0;
@@ -76,3 +99,155 @@ body {
     background-color: rgba(0,0,0,0.8);
 }
 
+/* Continue from the existing styles... */
+
+/* Style for main content area */
+main.background-content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background to contrast with text */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+main.background-content h1 {
+    color: #333; /* Darker color for headings */
+    margin-bottom: 16px;
+}
+
+main.background-content p {
+    text-align: justify;
+    line-height: 1.6; /* Improve readability */
+    color: #666; /* Soft color for text */
+}
+
+/* Enhance navigation bar */
+header nav ul {
+    display: flex;
+    justify-content: center; /* Center nav items */
+    padding: 10px 0;
+}
+
+nav ul li {
+    margin: 0 10px; /* Space out nav items */
+}
+
+/* Responsive nav */
+@media (max-width: 600px) {
+    nav ul li {
+        float: none;
+        display: block;
+        text-align: center;
+    }
+    nav ul li a {
+        padding: 10px;
+    }
+}
+
+/* Additional styles for intro text */
+main {
+    padding: 20px;
+    text-align: center; /* Center-aligns the content for a more aesthetic appeal */
+}
+
+main h1 {
+    margin-top: 20px;
+}
+
+main p {
+    margin-top: 20px;
+    max-width: 800px; /* Ensures text readability by not stretching too wide */
+    margin-left: auto; /* Centers the paragraph */
+    margin-right: auto;
+    text-align: justify; /* Improves readability */
+}
+
+/* Style adjustments for footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+    background-color: #333;
+    color: white;
+}
+
+/* Style adjustments for the intro image to fit text width */
+.intro-img-container img {
+    max-width: 100%; /* Ensures the image is responsive and fits the container */
+    height: auto; /* Maintains the aspect ratio */
+    border-radius: 4px; /* Optional: Matches your style for gallery images */
+    margin-bottom: 20px; /* Space between the image and the intro text */
+}
+
+/* Ensures the intro image container matches the text width */
+main .intro-img-container {
+    max-width: 800px; /* Matches the text container width */
+    margin: 20px auto; /* Centers the container */
+}
+.intro-img-container img {
+    max-width: 100%; /* Ensures the image is responsive and fits the container */
+    height: auto; /* Maintains the aspect ratio */
+    border-radius: 4px; /* Optional: Matches your style for gallery images */
+    margin-bottom: 20px; /* Space between the image and the intro text */
+}
+
+/* Ensures the intro image container matches the text width */
+main .intro-img-container {
+    max-width: 800px; /* Matches the text container width */
+    margin: 20px auto; /* Centers the container */
+}
+
+/* Continue from your existing styles... */
+
+.references {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px; /* Matching the main content width for consistency */
+    background-color: #f0f0f0; /* Slightly different background for distinction */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.references h2 {
+    color: #333;
+}
+
+.references ul {
+    list-style-type: none; /* Removes the default list styling */
+    padding: 0;
+}
+
+.references ul li {
+    padding: 5px 0; /* Adds a bit of space between list items */
+}
+
+.references ul li a {
+    color: #0066cc; /* A pleasant link color */
+    text-decoration: none; /* Optional: removes underline from links */
+}
+
+.references ul li a:hover {
+    text-decoration: underline; /* Restores underline on hover for clarity */
+}
+
+/* Specific styles for the reporting page images to prevent zoom and touching the page edges */
+.reporting-content img {
+    max-width: 100%; /* Ensures images are not larger than their container */
+    height: auto; /* Maintains the aspect ratio */
+    margin: 20px 0; /* Adds some space above and below the image */
+    border-radius: 4px; /* Optional: Adds slight rounding to the corners for a softer look */
+}
+
+/* Ensure this does not conflict with the gallery styling */
+.gallery .img-container img {
+    width: 100%; /* This might already be set as such */
+    height: auto; /* Adjust if necessary to maintain aspect ratio */
+    object-fit: cover; /* Keeps the aspect ratio, might crop the image */
+}
+
+/* Adjust the .img-container specifically for the reporting page if necessary */
+.reporting-content .img-container {
+    width: auto; /* Allows the container to adjust based on the image size, removing the fixed size */
+    margin: 0 auto; /* Centers the image container within its parent element */
+}
